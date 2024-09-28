@@ -219,7 +219,6 @@ class _BannerCarouselState extends State<BannerCarousel> {
       child: Stack(
         children: [
           Container(
-            decoration: _boxDecoration,
             height: widget.height,
             child: PageView(
               controller: widget.pageController ??
@@ -245,17 +244,6 @@ class _BannerCarouselState extends State<BannerCarousel> {
             children: rowIndicator,
           ),
         ),
-      );
-
-  BoxDecoration get _boxDecoration => BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: _shadowColor,
-            spreadRadius: 0,
-            blurRadius: 4,
-            offset: Offset(0, 3),
-          ),
-        ],
       );
 
   /// Method for when to change the page
